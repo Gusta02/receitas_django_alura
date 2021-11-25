@@ -5,7 +5,7 @@ from .models import Receita
 
 def index(request):
 
-    receitas = Receita.objects.all
+    receitas = Receita.objects.filter(publicada=True)
 
     dados = {
         'receitas' : receitas
